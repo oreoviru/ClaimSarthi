@@ -1,0 +1,312 @@
+[
+  {
+    "claim_id": "CLM-2026-0001",
+    "policy_id": "micro_health_gig",
+    "policy_name": "Gig-Worker Micro-Health Clinic Shield",
+    "claimant_name": "Vikram Patel",
+    "claimant_phone": "9876543210",
+    "claimant_aadhaar_last4": "8821",
+    "bank_account_number": "501004829104",
+    "bank_ifsc": "HDFC0001245",
+    "claimed_amount_inr": 3200.0,
+    "approved_amount_inr": 3200.0,
+    "reviewer_status": "APPROVED",
+    "document_paths": [
+      "/uploads/seed_bill_01.jpg"
+    ],
+    "incident_description": "Acute food poisoning with severe dehydration after delivery shift.",
+    "extracted_data": {
+      "document_type": "clinic_opd_bill",
+      "provider_name": "LifeLine Daycare Clinic, Ahmedabad",
+      "patient_or_claimant_name": "Vikram Patel",
+      "incident_or_bill_date": "2026-02-14",
+      "diagnosis_or_event": "Acute Food Poisoning & Dehydration",
+      "itemized_charges": [
+        {
+          "item_name": "Emergency Consultation & Vitals",
+          "amount_inr": 400.0,
+          "category": "consultation",
+          "is_covered": true
+        },
+        {
+          "item_name": "IV Saline & Electrolyte Infusion",
+          "amount_inr": 1200.0,
+          "category": "procedure",
+          "is_covered": true
+        },
+        {
+          "item_name": "Ciprofloxacin & Antiemetic Injections",
+          "amount_inr": 1600.0,
+          "category": "pharmacy",
+          "is_covered": true
+        }
+      ],
+      "total_amount_inr": 3200.0,
+      "has_stamp_or_signature": true,
+      "legibility_score": 0.94,
+      "field_confidences": {
+        "provider_name": 0.96,
+        "total_amount_inr": 0.98,
+        "incident_or_bill_date": 0.95
+      },
+      "unreadable_fields": []
+    },
+    "rule_checks": [
+      {
+        "rule_id": "RULE_AGE_WINDOW",
+        "label": "Age Window Check",
+        "status": "PASS",
+        "explanation": "Age 27 is within 18\u201360 range."
+      },
+      {
+        "rule_id": "RULE_WAITING_LIEN_PERIOD",
+        "label": "Waiting Period",
+        "status": "PASS",
+        "explanation": "Claim occurred 65 days after enrollment (exceeds 15-day requirement)."
+      },
+      {
+        "rule_id": "RULE_CLAIM_TYPE_COMPATIBILITY",
+        "label": "Scope Match",
+        "status": "PASS",
+        "explanation": "Daycare clinic OPD bill compatible with Micro-Health Shield."
+      },
+      {
+        "rule_id": "RULE_COVERAGE_CAP",
+        "label": "Policy Cap",
+        "status": "PASS",
+        "explanation": "Claim of \u20b93,200 is within the \u20b95,000 per-claim ceiling."
+      },
+      {
+        "rule_id": "RULE_EXCLUSION_SCANNER",
+        "label": "Exclusion Scanner",
+        "status": "PASS",
+        "explanation": "No disallowed cosmetics, tonics, or vitamins detected."
+      },
+      {
+        "rule_id": "RULE_REQUIRED_DOCUMENTS",
+        "label": "Checklist",
+        "status": "PASS",
+        "explanation": "Doctor prescription and itemized clinic invoice attached."
+      }
+    ],
+    "reviewer_notes": "Authorized for instant direct benefit transfer (DBT) to HDFC account.",
+    "created_at": "2026-02-15T10:30:00Z",
+    "updated_at": "2026-11-23T17:32:23.082489Z",
+    "decision_timestamp": "2026-11-23T17:32:23.082489Z",
+    "decided_at": "2026-11-23T17:32:23.082489Z"
+  },
+  {
+    "claim_id": "CLM-2026-0002",
+    "policy_id": "pmsby",
+    "policy_name": "Pradhan Mantri Suraksha Bima Yojana",
+    "claimant_name": "Sunita Devi (Nominee)",
+    "claimant_phone": "9123456780",
+    "claimant_aadhaar_last4": "4392",
+    "bank_account_number": "31049281749",
+    "bank_ifsc": "SBIN0004812",
+    "claimed_amount_inr": 200000.0,
+    "approved_amount_inr": 200000.0,
+    "reviewer_status": "INFO_REQUESTED",
+    "document_paths": [
+      "/uploads/seed_fir_death_cert.jpg"
+    ],
+    "incident_description": "Fatal vehicular collision on National Highway involving deceased bank subscriber.",
+    "extracted_data": {
+      "document_type": "death_certificate",
+      "provider_name": "District Civil Hospital & Police Station, Varanasi",
+      "patient_or_claimant_name": "Late Rajesh Kumar",
+      "incident_or_bill_date": "2026-01-20",
+      "diagnosis_or_event": "Fatal road traffic collision trauma",
+      "itemized_charges": [],
+      "total_amount_inr": 200000.0,
+      "has_stamp_or_signature": true,
+      "legibility_score": 0.91,
+      "field_confidences": {
+        "provider_name": 0.93,
+        "total_amount_inr": 0.95
+      },
+      "unreadable_fields": []
+    },
+    "rule_checks": [
+      {
+        "rule_id": "RULE_AGE_WINDOW",
+        "label": "Age Window Check",
+        "status": "PASS",
+        "explanation": "Subscriber was 42 years old (within 18\u201370 eligibility limit)."
+      },
+      {
+        "rule_id": "RULE_WAITING_LIEN_PERIOD",
+        "label": "Lien Check",
+        "status": "PASS",
+        "explanation": "Zero waiting period for accidental mortality under PMSBY."
+      },
+      {
+        "rule_id": "RULE_CLAIM_TYPE_COMPATIBILITY",
+        "label": "Scope Match",
+        "status": "PASS",
+        "explanation": "Accidental death claim conforms to PMSBY benefits."
+      },
+      {
+        "rule_id": "RULE_COVERAGE_CAP",
+        "label": "Statutory Cap",
+        "status": "PASS",
+        "explanation": "Sum of \u20b92,00,000 matches statutory accidental death cover."
+      },
+      {
+        "rule_id": "RULE_REQUIRED_DOCUMENTS",
+        "label": "Checklist",
+        "status": "WARNING",
+        "explanation": "FIR and Death Certificate verified; nominee bank passbook stamp requires bank verification."
+      }
+    ],
+    "reviewer_notes": "Please upload certified bank passbook copy for nominee DBT verification.",
+    "created_at": "2026-01-25T14:15:00Z",
+    "updated_at": "2026-11-23T17:32:23.083671Z",
+    "decision_timestamp": "2026-11-23T17:32:23.083671Z",
+    "decided_at": "2026-11-23T17:32:23.083671Z"
+  },
+  {
+    "claim_id": "CLM-2026-0041",
+    "policy_id": "micro_health_gig",
+    "policy_name": "Gig-Worker Micro-Health Clinic Shield",
+    "claimant_name": "Sunita Verma",
+    "claimant_phone": "9812345678",
+    "claimant_aadhaar_last4": "3821",
+    "bank_account_number": "501004829104",
+    "bank_ifsc": "HDFC0001245",
+    "claimed_amount_inr": 2800.0,
+    "approved_amount_inr": 2800.0,
+    "reviewer_status": "READY_TO_APPROVE",
+    "document_paths": [
+      "/uploads/sunita_opd_bill.jpg"
+    ],
+    "extracted_data": {
+      "document_type": "clinic_opd_bill",
+      "provider_name": "LifeLine Daycare Clinic",
+      "patient_or_claimant_name": "Sunita Verma",
+      "incident_or_bill_date": "2026-02-15",
+      "diagnosis_or_event": "Acute Viral Bronchitis",
+      "itemized_charges": [],
+      "total_amount_inr": 2800.0,
+      "has_stamp_or_signature": true,
+      "legibility_score": 0.94,
+      "field_confidences": {},
+      "unreadable_fields": [],
+      "damage_assessment": null
+    },
+    "rule_checks": [
+      {
+        "rule_id": "RULE_AGE_WINDOW",
+        "label": "Age Window Check",
+        "status": "PASS",
+        "explanation": "Age 29 is valid.",
+        "action_required": null,
+        "missing_documents": {}
+      },
+      {
+        "rule_id": "RULE_REQUIRED_DOCUMENTS",
+        "label": "Checklist",
+        "status": "PASS",
+        "explanation": "All proofs attached.",
+        "action_required": null,
+        "missing_documents": {}
+      }
+    ],
+    "reviewer_notes": "Submitted via SurakshaSetu self-service portal.",
+    "created_at": "2026-11-23T17:32:23.114967Z",
+    "updated_at": "2026-11-23T17:32:23.114967Z"
+  },
+  {
+    "claim_id": "CLM-2026-0042",
+    "policy_id": "micro_health_gig",
+    "policy_name": "Gig-Worker Micro-Health Clinic Shield",
+    "claimant_name": "Adjudication Test User",
+    "claimant_phone": null,
+    "claimant_aadhaar_last4": null,
+    "bank_account_number": null,
+    "bank_ifsc": null,
+    "claimed_amount_inr": 1800.0,
+    "approved_amount_inr": 1800.0,
+    "reviewer_status": "APPROVED",
+    "document_paths": [],
+    "extracted_data": null,
+    "rule_checks": [],
+    "reviewer_notes": "Adjudicated and approved by claims officer. Dispatched via Aadhaar DBT.",
+    "created_at": "2026-11-23T17:32:23.116280Z",
+    "updated_at": "2026-11-23T17:32:23.117267Z",
+    "decision_timestamp": "2026-11-23T17:32:23.117267Z",
+    "decided_at": "2026-11-23T17:32:23.117267Z"
+  },
+  {
+    "claim_id": "CLM-2026-0043",
+    "policy_id": "micro_health_gig",
+    "policy_name": "Gig-Worker Micro-Health Clinic Shield",
+    "claimant_name": "Sunita Verma",
+    "claimant_phone": "9812345678",
+    "claimant_aadhaar_last4": "3821",
+    "bank_account_number": "501004829104",
+    "bank_ifsc": "HDFC0001245",
+    "claimed_amount_inr": 2800.0,
+    "approved_amount_inr": 2800.0,
+    "reviewer_status": "READY_TO_APPROVE",
+    "document_paths": [
+      "/uploads/sunita_opd_bill.jpg"
+    ],
+    "extracted_data": {
+      "document_type": "clinic_opd_bill",
+      "provider_name": "LifeLine Daycare Clinic",
+      "patient_or_claimant_name": "Sunita Verma",
+      "incident_or_bill_date": "2026-02-15",
+      "diagnosis_or_event": "Acute Viral Bronchitis",
+      "itemized_charges": [],
+      "total_amount_inr": 2800.0,
+      "has_stamp_or_signature": true,
+      "legibility_score": 0.94,
+      "field_confidences": {},
+      "unreadable_fields": [],
+      "damage_assessment": null
+    },
+    "rule_checks": [
+      {
+        "rule_id": "RULE_AGE_WINDOW",
+        "label": "Age Window Check",
+        "status": "PASS",
+        "explanation": "Age 29 is valid.",
+        "action_required": null,
+        "missing_documents": {}
+      },
+      {
+        "rule_id": "RULE_REQUIRED_DOCUMENTS",
+        "label": "Checklist",
+        "status": "PASS",
+        "explanation": "All proofs attached.",
+        "action_required": null,
+        "missing_documents": {}
+      }
+    ],
+    "reviewer_notes": "Submitted via SurakshaSetu self-service portal.",
+    "created_at": "2026-11-23T17:33:03.891236Z",
+    "updated_at": "2026-11-23T17:33:03.891236Z"
+  },
+  {
+    "claim_id": "CLM-2026-0044",
+    "policy_id": "micro_health_gig",
+    "policy_name": "Gig-Worker Micro-Health Clinic Shield",
+    "claimant_name": "Adjudication Test User",
+    "claimant_phone": null,
+    "claimant_aadhaar_last4": null,
+    "bank_account_number": null,
+    "bank_ifsc": null,
+    "claimed_amount_inr": 1800.0,
+    "approved_amount_inr": 1800.0,
+    "reviewer_status": "APPROVED",
+    "document_paths": [],
+    "extracted_data": null,
+    "rule_checks": [],
+    "reviewer_notes": "Adjudicated and approved by claims officer. Dispatched via Aadhaar DBT.",
+    "created_at": "2026-11-23T17:33:03.893600Z",
+    "updated_at": "2026-11-23T17:33:03.894716Z",
+    "decision_timestamp": "2026-11-23T17:33:03.894716Z",
+    "decided_at": "2026-11-23T17:33:03.894716Z"
+  }
+]
