@@ -1,0 +1,282 @@
+[
+  {
+    "id": "pmsby",
+    "name": "Pradhan Mantri Suraksha Bima Yojana",
+    "short_code": "PMSBY",
+    "category": "Personal Accident & Disability Insurance",
+    "target_occupations": [
+      "Unorganized sector workers",
+      "Daily wage laborers",
+      "Domestic workers",
+      "Agricultural laborers",
+      "Street vendors",
+      "Auto and taxi drivers",
+      "General citizens with savings bank accounts"
+    ],
+    "min_age": 18,
+    "max_age": 70,
+    "annual_premium_inr": 20,
+    "max_claim_inr": 200000,
+    "waiting_period_days": 0,
+    "required_docs": [
+      "Duly completed and signed PMSBY claim form",
+      "Original or certified copy of Death Certificate (for accidental death claims)",
+      "Disability certificate issued by a competent Civil Surgeon / Government Medical Board",
+      "First Information Report (FIR) or Panchnama / Police inquest report",
+      "Post-Mortem Examination (PME) report (for death cases)",
+      "Aadhaar card copy of the insured and nominee",
+      "Copy of bank passbook or cancelled cheque proving auto-debit of premium"
+    ],
+    "exclusions": [
+      "Natural death due to illness, disease, cardiac arrest, or old age",
+      "Suicide, attempted suicide, or intentional self-inflicted injury",
+      "Routine in-patient or out-patient hospitalization costs and medical bills",
+      "Accidents occurring while under the influence of intoxicating alcohol, liquor, or drugs",
+      "Death or injury arising from participation in criminal or unlawful activities",
+      "War, invasion, rebellion, hostilities, or nuclear contamination"
+    ],
+    "covered_highlights": [
+      "₹2,00,000 benefit payable upon accidental death",
+      "₹2,00,000 benefit for permanent total disability (loss of both eyes or loss of use of both hands or feet, or loss of sight of one eye and loss of use of one hand/foot)",
+      "₹1,00,000 benefit for permanent partial disability (total and irrecoverable loss of sight of one eye or loss of use of one hand or foot)",
+      "Extremely affordable ₹20/year auto-debited in a single installment from subscriber's savings bank account",
+      "Worldwide 24x7 accidental coverage for active bank account holders"
+    ],
+    "not_covered_highlights": [
+      "Any natural death or non-accidental mortality",
+      "Routine hospitalization fees, surgeon bills, and post-discharge medicines",
+      "Self-harm, suicide, or substance-induced injuries"
+    ],
+    "plain_summary": "A government-backed micro-insurance scheme providing ₹2,00,000 accidental death and permanent total disability cover (and ₹1,00,000 for partial disability) for just ₹20 per year for individuals aged 18 to 70 with an active savings bank account. Routine hospitalization is strictly excluded.",
+    "is_government_scheme": true,
+    "premium_schedule": {
+      "frequency": "annual",
+      "auto_debit_month": "May/June",
+      "amount_inr": 20
+    },
+    "benefit_tiers": {
+      "accidental_death": 200000,
+      "total_permanent_disability": 200000,
+      "partial_permanent_disability": 100000
+    }
+  },
+  {
+    "id": "pmjjby",
+    "name": "Pradhan Mantri Jeevan Jyoti Bima Yojana",
+    "short_code": "PMJJBY",
+    "category": "Term Life Insurance",
+    "target_occupations": [
+      "Informal sector workers",
+      "Gig and platform delivery partners",
+      "Artisans and handicraft workers",
+      "Small shopkeepers and traders",
+      "Rural and semi-urban households",
+      "Salaried and non-salaried bank account holders"
+    ],
+    "min_age": 18,
+    "max_age": 50,
+    "annual_premium_inr": 436,
+    "max_claim_inr": 200000,
+    "waiting_period_days": 30,
+    "required_docs": [
+      "Duly completed PMJJBY claim form and discharge receipt signed by nominee",
+      "Original or certified copy of Death Certificate",
+      "Aadhaar card copy of the deceased policyholder and claimant nominee",
+      "Bank passbook copy or cancelled cheque of the nominee for direct benefit transfer",
+      "Proof of bank account auto-debit of premium for the relevant policy year"
+    ],
+    "exclusions": [
+      "Death due to non-accidental causes occurring within the initial 30-day lien period from enrollment date",
+      "Claims beyond ₹2,00,000 in case of multiple bank accounts/policies held by the same individual",
+      "Coverage terminates upon the policyholder attaining age 55 or closure of bank account",
+      "Fraudulent misrepresentation or identity mismatch"
+    ],
+    "covered_highlights": [
+      "₹2,00,000 pure life insurance benefit payable to nominee upon death of subscriber due to any cause (natural, medical, or accidental)",
+      "Pro-rata quarterly premium structure for mid-year joiners: ₹436 (June–Aug), ₹342 (Sept–Nov), ₹228 (Dec–Feb), and ₹114 (Mar–May)",
+      "Seamless auto-debit renewal through bank/post office account",
+      "Renewable annually up to age 55 for individuals enrolled before age 50"
+    ],
+    "not_covered_highlights": [
+      "Non-accidental deaths occurring within the first 30 days of initial enrollment (30-day lien window)",
+      "Hospitalization expenses, outpatient treatment, or critical illness treatment bills",
+      "Maturity bonuses or surrender value (pure term life insurance without investment returns)"
+    ],
+    "plain_summary": "A government-administered pure term life insurance scheme granting ₹2,00,000 death coverage for any cause of death to individuals aged 18 to 50 for an annual premium of ₹436 (with quarterly pro-rata enrollment slabs of ₹436/₹342/₹228/₹114), subject to a 30-day initial lien period on non-accidental deaths.",
+    "is_government_scheme": true,
+    "pro_rata_slabs": [
+      { "period": "June - August", "premium_inr": 436 },
+      { "period": "September - November", "premium_inr": 342 },
+      { "period": "December - February", "premium_inr": 228 },
+      { "period": "March - May", "premium_inr": 114 }
+    ],
+    "special_rules": {
+      "lien_clause": "30-day waiting period (lien) applies to non-accidental deaths from enrollment date; accidental deaths covered from day one."
+    }
+  },
+  {
+    "id": "pmfby",
+    "name": "Pradhan Mantri Fasal Bima Yojana",
+    "short_code": "PMFBY",
+    "category": "Agricultural & Crop Insurance",
+    "target_occupations": [
+      "Loanee farmers (Kisan Credit Card holders)",
+      "Non-loanee individual farmers",
+      "Tenant farmers and sharecroppers",
+      "Horticulture and plantation growers"
+    ],
+    "min_age": 18,
+    "max_age": 75,
+    "annual_premium_inr": 0,
+    "max_claim_inr": 200000,
+    "waiting_period_days": 0,
+    "required_docs": [
+      "Crop insurance intimation form submitted within 72 hours of localized casualty",
+      "Land Record Documents (Record of Rights / 7/12 extract / Patta / Land possession certificate)",
+      "Sowing Certificate / Crop Declaration verified by Village Revenue Officer (Patwari / VAO)",
+      "Tenant agreement or sharecropper declaration (for non-owner cultivators)",
+      "Bank passbook copy linked to Aadhaar showing premium deduction or receipt",
+      "Geo-tagged photographs of localized crop inundation/hail damage (where required)"
+    ],
+    "exclusions": [
+      "Crop loss intimated after 72 hours of occurrence for localized calamities",
+      "Losses arising from war, nuclear risks, civil commotion, or malicious destruction",
+      "Damage post-harvest caused by theft, arson, or stray cattle grazing",
+      "Storage losses in godowns or premises outside the drying field",
+      "Unapproved crop varieties or avoidable farmer negligence"
+    ],
+    "covered_highlights": [
+      "Farmer premium strictly capped: 2.0% of Sum Insured for Kharif food/oilseed crops, 1.5% for Rabi food/oilseed crops, and 5.0% for commercial/horticultural crops",
+      "Balance actuarial premium subsidized equally by Central and State Governments",
+      "Comprehensive risk coverage: Prevented sowing, mid-season adversity, standing crop yield loss, and localized risks (hailstorm, landslide, inundation, cloudburst)",
+      "14-day post-harvest cover for cut-and-spread crops drying in fields against unseasonal/cyclonic rainfall",
+      "Strict 72-hour localized calamity intimation rule via mobile app or toll-free national helpline 14447"
+    ],
+    "not_covered_highlights": [
+      "Localized calamity claims reported after the 72-hour window",
+      "Field produce damaged beyond the 14-day post-harvest drying period",
+      "Negligence, willful destruction, or theft"
+    ],
+    "plain_summary": "National comprehensive crop insurance safeguarding farmers against non-preventable natural risks from pre-sowing to 14 days post-harvest. Farmer premium share is capped at 2% for Kharif, 1.5% for Rabi, and 5% for commercial/horticultural crops, with mandatory 72-hour localized calamity intimation via the 14447 national helpline.",
+    "is_government_scheme": true,
+    "farmer_premium_caps": {
+      "kharif_food_oilseeds_percent": 2.0,
+      "rabi_food_oilseeds_percent": 1.5,
+      "commercial_horticultural_percent": 5.0
+    },
+    "critical_timelines": {
+      "localized_calamity_intimation_hours": 72,
+      "post_harvest_coverage_days": 14,
+      "national_helpline": "14447"
+    }
+  },
+  {
+    "id": "ab_pmjay",
+    "name": "Ayushman Bharat Pradhan Mantri Jan Arogya Yojana",
+    "short_code": "AB-PMJAY",
+    "category": "Inpatient Hospitalization & Tertiary Health Assurance",
+    "target_occupations": [
+      "Deprived rural households (identified via SECC 2011)",
+      "Urban occupational categories (ragpickers, domestic helpers, street vendors, security guards, construction workers)",
+      "Senior citizens aged 70 years and above across India (universal entitlement)"
+    ],
+    "min_age": 0,
+    "max_age": 100,
+    "annual_premium_inr": 0,
+    "max_claim_inr": 500000,
+    "waiting_period_days": 0,
+    "required_docs": [
+      "Ayushman Bharat PM-JAY e-Card / ABHA (Ayushman Bharat Health Account) ID",
+      "Aadhaar card of patient / beneficiary",
+      "Ration card or government family identification document",
+      "Hospital IPD admission slip and treatment pre-authorization generated by Ayushman Mitra",
+      "Discharge summary with diagnostic reports and pharmacy logs"
+    ],
+    "exclusions": [
+      "Standalone Out-Patient Department (OPD) clinic consultations and retail medicine purchases",
+      "Cosmetic, plastic, or aesthetic procedures not related to post-trauma reconstruction",
+      "Fertility treatments, IVF, and surrogate procedures",
+      "Hospitalization in non-empanelled facilities except in life-threatening certified emergencies",
+      "Diagnostic investigations conducted without hospital admission or in-patient justification"
+    ],
+    "covered_highlights": [
+      "₹5,00,000 cashless and paperless annual healthcare assurance per eligible family for secondary and tertiary hospitalization",
+      "100% premium funded by Central and State Governments (₹0 premium for beneficiaries)",
+      "Day-one coverage for all pre-existing medical conditions with zero waiting period",
+      "Includes 3 days pre-hospitalization and 15 days post-hospitalization diagnostics and medication",
+      "Senior Citizen Universal Top-Up: Dedicated ₹5,00,000 distinct cover for all individuals aged 70+ (Ayushman Vay Vandana Card)",
+      "Portability across 29,000+ empanelled public and private hospitals nationwide"
+    ],
+    "not_covered_highlights": [
+      "Standalone OPD consultations and routine pharmacy bills",
+      "Elective cosmetic surgeries, routine vision correction, and dental checkups",
+      "Admissions in unaccredited, non-empanelled private nursing homes"
+    ],
+    "plain_summary": "The world's largest government-financed health assurance program, offering ₹5,00,000 cashless secondary and tertiary hospitalization coverage per family annually at ₹0 premium, featuring day-one pre-existing disease cover and a special ₹5,00,000 top-up for seniors aged 70+. Standalone OPD bills are strictly excluded.",
+    "is_government_scheme": true,
+    "scheme_features": {
+      "family_floater_limit_inr": 500000,
+      "senior_70_plus_topup_inr": 500000,
+      "cashless_network": "29000+ empanelled hospitals",
+      "pre_post_hospitalization_days": {
+        "pre_hospitalization": 3,
+        "post_hospitalization": 15
+      }
+    }
+  },
+  {
+    "id": "micro_health_gig",
+    "name": "Gig-Worker Micro-Health Clinic Shield",
+    "short_code": "GIG-SHIELD",
+    "category": "Micro-Health & Daycare Clinical Insurance",
+    "target_occupations": [
+      "Food delivery executives (Zomato, Swiggy)",
+      "Quick commerce delivery partners (Blinkit, Zepto, Instamart)",
+      "Ride-hailing bike & cab drivers (Ola, Uber, Rapido)",
+      "Logistics and courier delivery couriers (Delhivery, Shadowfax)",
+      "Freelance on-demand service technicians"
+    ],
+    "min_age": 18,
+    "max_age": 60,
+    "annual_premium_inr": 588,
+    "max_claim_inr": 10000,
+    "waiting_period_days": 15,
+    "required_docs": [
+      "Gig platform driver/delivery partner active profile screenshot or ID card",
+      "Consultation prescription from a licensed MBBS/MD practitioner",
+      "Itemized diagnostic laboratory bills and clinical treatment summary",
+      "Itemized pharmacy invoice showing doctor-prescribed acute illness medications",
+      "Aadhaar card copy",
+      "UPI ID / Bank details for direct reimbursement transfer within 24 hours"
+    ],
+    "exclusions": [
+      "Cosmetic, aesthetic, dermatological anti-aging, or weight-loss procedures",
+      "Nutritional dietary supplements, multi-vitamins, tonics, and protein powders without documented acute medical deficiency",
+      "Routine dental cleaning, scaling, orthodontic braces, and root canals (except emergency trauma repairs)",
+      "Inpatient hospitalizations exceeding 24 hours (requiring standard comprehensive hospitalization cover)",
+      "Non-accidental illnesses diagnosed during the initial 15-day waiting period"
+    ],
+    "covered_highlights": [
+      "Designed specifically for gig platform riders: ₹49/month micro-subscription (₹588 annual equivalent)",
+      "₹5,000 per-claim ceiling for outpatient clinic consultations, acute day-care procedures, and prescription meds",
+      "₹10,000 aggregate annual policy limit across multiple claims",
+      "Rapid UPI-based digital reimbursement settled within 24 to 48 hours",
+      "15-day initial waiting period for medical sickness; road accident trauma injuries covered from minute one"
+    ],
+    "not_covered_highlights": [
+      "Cosmetic procedures, multi-vitamins, and routine dental care",
+      "Any single claim exceeding ₹5,000 or cumulative yearly claims above ₹10,000",
+      "Medical illness occurring during the first 15 days of policy enrollment"
+    ],
+    "plain_summary": "A representative IRDAI-aligned micro-health insurance policy customized for platform gig workers and delivery executives. For ₹49/month (₹588/year), it provides up to ₹5,000 per claim and a ₹10,000 annual cap for clinic consultations, minor trauma treatments, and acute illness prescriptions, with a 15-day waiting period and clear exclusions on cosmetic treatments, vitamins, and routine dental care.",
+    "is_government_scheme": false,
+    "subscription_pricing": {
+      "monthly_inr": 49,
+      "annual_equivalent_inr": 588
+    },
+    "claim_caps": {
+      "per_claim_limit_inr": 5000,
+      "annual_aggregate_limit_inr": 10000
+    }
+  }
+]
