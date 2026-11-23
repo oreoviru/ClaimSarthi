@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SurakshaSetu Micro-Insurance Assistant</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    :root {
+      --primary: #108e66;
+    }
+    body {
+      padding: 1rem 0;
+    }
+    header {
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      margin-bottom: 2rem;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      background: #e6f4ea;
+      color: #137333;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <div>
+          <hgroup>
+            <h1>SurakshaSetu</h1>
+            <p>Intelligent Micro-Insurance Scheme Matcher & Claim Audit Assistant</p>
+          </hgroup>
+        </div>
+        <div id="health-badge">
+          <span class="badge">Checking API...</span>
+        </div>
+      </div>
+    </header>
+
+    <section id="app-container">
+      <article>
+        <h3>Welcome to SurakshaSetu</h3>
+        <p>Your portal for real Indian micro-insurance schemes: <strong>PMSBY</strong>, <strong>PMJJBY</strong>, <strong>PMFBY</strong>, <strong>AB-PMJAY</strong>, and <strong>Gig-Worker Clinic Shield</strong>.</p>
+        <p>Access interactive API documentation at <a href="/docs" target="_blank">/docs (Swagger UI)</a> or view health at <a href="/api/health" target="_blank">/api/health</a>.</p>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    async function checkHealth() {
+      try {
+        const res = await fetch('/api/health');
+        const data = await res.json();
+        const badge = document.getElementById('health-badge');
+        if (data.status === 'healthy') {
+          const keyStatus = data.gemini_api_key_configured ? 'Gemini Active' : 'Demo Fallback Active';
+          badge.innerHTML = `<span class="badge">${data.service} • ${keyStatus}</span>`;
+        }
+      } catch (err) {
+        console.error('Health check failed', err);
+      }
+    }
+    checkHealth();
+  </script>
+</body>
+</html>
