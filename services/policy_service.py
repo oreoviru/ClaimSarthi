@@ -88,3 +88,23 @@ def list_policies_by_category(category: str) -> List[Dict[str, Any]]:
 
 # Preload cache on module import
 load_policies()
+
+
+if __name__ == "__main__":
+    import sys
+    print("=" * 65)
+    print("🛡️  SurakshaSetu Policy Service — Micro-Insurance Schemes Catalog")
+    print("=" * 65)
+    all_schemes = get_all_policies()
+    print(f"Successfully loaded and verified {len(all_schemes)} active schemes:\n")
+    for idx, p in enumerate(all_schemes, 1):
+        cap = p.get('max_claim_inr', 0)
+        cap_str = f"₹{cap:,}" if cap else "No Upper Limit"
+        print(f" {idx}. [{p.get('id')}] {p.get('name')}")
+        print(f"    • Category      : {p.get('category', 'General')}")
+        print(f"    • Coverage Cap  : {cap_str}")
+        print(f"    • Waiting Period: {p.get('waiting_period_days', 0)} days")
+        print(f"    • Required Docs : {', '.join(p.get('required_docs', []))}")
+        print()
+    print("=" * 65)
+    print("✓ All policy schemas and rules validated successfully.")

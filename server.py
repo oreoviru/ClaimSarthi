@@ -412,9 +412,9 @@ async def analyze_claim(
     """
     # 1. Collect and process uploads
     all_uploads: List[UploadFile] = []
-    if files:
+    if files and isinstance(files, (list, tuple)):
         all_uploads.extend(files)
-    if file and file not in all_uploads:
+    if file and isinstance(file, UploadFile) and file not in all_uploads:
         all_uploads.append(file)
 
     saved_urls: List[str] = []

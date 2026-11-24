@@ -1,4 +1,5 @@
 import asyncio
+import io
 from models import ClaimAnalysisResponse
 from server import UploadFile, analyze_claim
 
@@ -8,7 +9,10 @@ def test_analyze_claim_endpoint_orchestration():
     with open("samples/sample_clinic_bill.jpg", "rb") as f:
         bill_bytes = f.read()
 
-    upload_file = UploadFile(filename="clinic_bill.jpg", file=bill_bytes, content_type="image/jpeg")
+    try:
+        upload_file = UploadFile(file=io.BytesIO(bill_bytes), filename="clinic_bill.jpg", headers={"content-type": "image/jpeg"})
+    except TypeError:
+        upload_file = UploadFile(filename="clinic_bill.jpg", file=bill_bytes, content_type="image/jpeg")
 
     async def _run():
         return await analyze_claim(
